@@ -107,3 +107,12 @@ class CorpusCounter:
         """
         logger.info("Saving token counts to %s", csv_file)
         self.get_token_counts_as_dataframe().to_csv(csv_file, index=False, header=True)
+    
+    def top_n_frequent_words(self, n):
+        """
+        This function returns the top n most frequent words in a corpus.
+        """
+
+        sorted_token_counter_list=sorted(self.token_counter.items(), key=lambda item: item[1],reverse=True)[:n]
+        return [word for (word, count) in sorted_token_counter_list] 
+

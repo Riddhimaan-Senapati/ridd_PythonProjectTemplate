@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 You should also add project tags for each release in Github, see [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
 
+## [2.0.1] - 2024-06-05
+
+### Changed
+- Added a new function to `word_count.py` to return the top n frequent words in a corpus where n is a parameter
+- Added a unit test to `test_word_count.py` to test this new feature
+
 ## [Unreleased]
 ### Changed
 - GitHub workflow for linting and formatting uses ruff as a separate job
