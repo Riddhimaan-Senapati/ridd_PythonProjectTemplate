@@ -107,7 +107,8 @@ def test_corpus_counter_save_csv(tmp_path):
     expected_csv = "token,count\na,2\nb,1\nc,1\nx,1\ny,1\nz,1\n"
     assert my_csv.read_text() == expected_csv
 
+
 def test_top_n_frequent_words():
     cc = word_count.CorpusCounter()
     cc.add_doc("Hello World Hello")
-    assert cc.top_n_frequent_words(1)==["Hello"]    
+    assert cc.top_n_frequent_words(1) == ["Hello"]
